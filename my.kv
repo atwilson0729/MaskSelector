@@ -12,6 +12,7 @@ WindowManager:
 <MainWindow>:
     name: "main"
 
+
     GridLayout:
         cols:1
 
@@ -25,14 +26,13 @@ WindowManager:
             text: "Disposable"
             on_release:
                 app.root.current = "second"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Reusable"
             on_release:
                 app.root.current = "second"
-                root.manager.transition.direction = "right"
-
+                root.manager.transition.direction = "left"
 
 <SecondWindow>:
     name: "second"
@@ -50,31 +50,32 @@ WindowManager:
             text: "Cotton"
             on_release:
                 app.root.current = "third"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Polyester"
             on_release:
                 app.root.current = "third"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Spandex"
             on_release:
                 app.root.current = "third"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Does not matter"
             on_release:
                 app.root.current = "third"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Go Back"
             on_release:
                 app.root.current = "main"
                 root.manager.transition.direction = "right"
+
 
 <ThirdWindow>:
     name: "third"
@@ -92,43 +93,43 @@ WindowManager:
             text: "Children's"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Adult"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Small"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Medium"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Large"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "X-Large"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Universal"
             on_release:
                 app.root.current = "fourth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Go Back"
@@ -152,19 +153,19 @@ WindowManager:
             text: "Male"
             on_release:
                 app.root.current = "fifth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Female"
             on_release:
                 app.root.current = "fifth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Unisex"
             on_release:
                 app.root.current = "fifth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Go Back"
@@ -175,7 +176,6 @@ WindowManager:
 
 <FifthWindow>:
     name: "fifth"
-
     GridLayout:
         cols:1
 
@@ -189,49 +189,49 @@ WindowManager:
             text: "Red"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Orange"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Yellow"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Green"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Blue"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Purple"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Pattern"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Black"
             on_release:
                 app.root.current = "sixth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
 
         Button:
@@ -244,7 +244,7 @@ WindowManager:
 <SixthWindow>:
     name: "sixth"
 
-        GridLayout:
+    GridLayout:
         cols:1
 
         GridLayout:
@@ -257,19 +257,19 @@ WindowManager:
             text: "Low"
             on_release:
                 app.root.current = "seventh"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Medium"
             on_release:
                 app.root.current = "seventh"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "High"
             on_release:
                 app.root.current = "seventh"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
 
         Button:
@@ -281,7 +281,7 @@ WindowManager:
 <SeventhWindow>:
     name: "seventh"
 
-        GridLayout:
+    GridLayout:
         cols:1
 
         GridLayout:
@@ -294,13 +294,13 @@ WindowManager:
             text: "Elastic"
             on_release:
                 app.root.current = "eighth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Adjustable"
             on_release:
                 app.root.current = "eighth"
-                root.manager.transition.direction = "right"
+                root.manager.transition.direction = "left"
 
         Button:
             text: "Go Back"
@@ -310,7 +310,7 @@ WindowManager:
 
 
 <EighthWindow>:
-    name: "eight"
+    name: "eighth"
 
     GridLayout:
         cols:1
@@ -319,13 +319,13 @@ WindowManager:
             cols: 2
 
             Label:
-                text: "Thank you for completing those questions, now we'll show you some masks that fir your nedds! "
+                text: "Thank you for completing those questions, now we'll show you some masks that for your needs! "
 
     Button:
         text: "Finish"
         on_release:
             app.root.current = "ninth"
-            root.manager.transition.direction = "right"
+            root.manager.transition.direction = "left"
 
 
 <NinthWindow>:
@@ -334,5 +334,5 @@ WindowManager:
     Button:
         text: "Results"
         on_release:
-            app.root.current = "ninth"
+            app.root.current = "main"
             root.manager.transition.direction = "right"
