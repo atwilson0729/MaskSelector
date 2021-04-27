@@ -1,0 +1,338 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    FourthWindow:
+    FifthWindow:
+    SixthWindow:
+    SeventhWindow:
+    EighthWindow:
+    NinthWindow:
+
+<MainWindow>:
+    name: "main"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What kind of mask would you like: "
+
+        Button:
+            text: "Disposable"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Reusable"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+
+<SecondWindow>:
+    name: "second"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What material of mask do you prefer?"
+
+        Button:
+            text: "Cotton"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Polyester"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Spandex"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Does not matter"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+<ThirdWindow>:
+    name: "third"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What size mask would you like?"
+
+        Button:
+            text: "Children's"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Adult"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Small"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Medium"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Large"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "X-Large"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Universal"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "right"
+
+<FourthWindow>:
+    name: "fourth"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Would you like a male female or unisex mask?"
+
+        Button:
+            text: "Male"
+            on_release:
+                app.root.current = "fifth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Female"
+            on_release:
+                app.root.current = "fifth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Unisex"
+            on_release:
+                app.root.current = "fifth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+
+<FifthWindow>:
+    name: "fifth"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Would color mask would you like?"
+
+        Button:
+            text: "Red"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Orange"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Yellow"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Green"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Blue"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Purple"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Pattern"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Black"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "right"
+
+
+<SixthWindow>:
+    name: "sixth"
+
+        GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What level of filtration would you like?"
+
+        Button:
+            text: "Low"
+            on_release:
+                app.root.current = "seventh"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Medium"
+            on_release:
+                app.root.current = "seventh"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "High"
+            on_release:
+                app.root.current = "seventh"
+                root.manager.transition.direction = "right"
+
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+<SeventhWindow>:
+    name: "seventh"
+
+        GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Do you want elastic or adjustable?"
+
+        Button:
+            text: "Elastic"
+            on_release:
+                app.root.current = "eighth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Adjustable"
+            on_release:
+                app.root.current = "eighth"
+                root.manager.transition.direction = "right"
+
+        Button:
+            text: "Go Back"
+            on_release:
+                app.root.current = "seventh"
+                root.manager.transition.direction = "right"
+
+
+<EighthWindow>:
+    name: "eight"
+
+    GridLayout:
+        cols:1
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Thank you for completing those questions, now we'll show you some masks that fir your nedds! "
+
+    Button:
+        text: "Finish"
+        on_release:
+            app.root.current = "ninth"
+            root.manager.transition.direction = "right"
+
+
+<NinthWindow>:
+    name: "ninth"
+
+    Button:
+        text: "Results"
+        on_release:
+            app.root.current = "ninth"
+            root.manager.transition.direction = "right"
