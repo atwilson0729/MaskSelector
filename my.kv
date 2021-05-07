@@ -1,4 +1,5 @@
 WindowManager:
+    StartMenu:
     MainWindow:
     SecondWindow:
     ThirdWindow:
@@ -9,79 +10,142 @@ WindowManager:
     EighthWindow:
     NinthWindow:
 
+<StartMenu>:
+    name: "start"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        BoxLayout:
+            #cols:2
+
+            Label:
+                text: "Welcome to the Mask Quiz. Click Start to find your perfect mask! "
+
+
+        Button:
+            text: "Start"
+            background_color: 1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "up"
+
+
 <MainWindow>:
     name: "main"
 
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
 
-    GridLayout:
-        cols:1
+        padding: 50
+        spacing: 50
+        #cols:1
 
-        GridLayout:
-            cols: 2
+        BoxLayout:
+            #cols:2
 
             Label:
-                text: "What kind of mask would you like: "
+                text: "What kind of mask would you like? "
 
         Button:
             text: "Disposable"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
-                app.root.current = "second"
+                app.root.current = "third"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Reusable"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "second"
                 root.manager.transition.direction = "left"
 
+
 <SecondWindow>:
     name: "second"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
 
         GridLayout:
-            cols: 2
+            cols:2
 
             Label:
                 text: "What material of mask do you prefer?"
 
         Button:
             text: "Cotton"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "third"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Polyester"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "third"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Spandex"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "third"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Does not matter"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "third"
                 root.manager.transition.direction = "left"
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
                 app.root.current = "main"
                 root.manager.transition.direction = "right"
 
-
 <ThirdWindow>:
     name: "third"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
 
         GridLayout:
             cols: 2
@@ -91,57 +155,92 @@ WindowManager:
 
         Button:
             text: "Children's"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Adult"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Small"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Medium"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Large"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "X-Large"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Universal"
+            background_color: 1, 1, 1, 0.6
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "left"
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
-                app.root.current = "third"
+                app.root.current = "second"
                 root.manager.transition.direction = "right"
 
 <FourthWindow>:
     name: "fourth"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
 
         GridLayout:
             cols: 2
@@ -151,33 +250,54 @@ WindowManager:
 
         Button:
             text: "Male"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fifth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Female"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fifth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Unisex"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "fifth"
                 root.manager.transition.direction = "left"
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
-                app.root.current = "fourth"
+                app.root.current = "third"
                 root.manager.transition.direction = "right"
 
 
 <FifthWindow>:
     name: "fifth"
-    GridLayout:
-        cols:1
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
 
         GridLayout:
             cols: 2
@@ -187,55 +307,90 @@ WindowManager:
 
         Button:
             text: "Red"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Orange"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Yellow"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Green"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Blue"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Purple"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Pattern"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Black"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "sixth"
                 root.manager.transition.direction = "left"
 
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
                 app.root.current = "fourth"
                 root.manager.transition.direction = "right"
@@ -244,8 +399,13 @@ WindowManager:
 <SixthWindow>:
     name: "sixth"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
 
         GridLayout:
             cols: 2
@@ -255,34 +415,54 @@ WindowManager:
 
         Button:
             text: "Low"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "seventh"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Medium"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "seventh"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "High"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "seventh"
                 root.manager.transition.direction = "left"
 
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
-                app.root.current = "sixth"
+                app.root.current = "fifth"
                 root.manager.transition.direction = "right"
 
 <SeventhWindow>:
     name: "seventh"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
 
         GridLayout:
             cols: 2
@@ -292,47 +472,70 @@ WindowManager:
 
         Button:
             text: "Elastic"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "eighth"
                 root.manager.transition.direction = "left"
 
         Button:
             text: "Adjustable"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "eighth"
                 root.manager.transition.direction = "left"
 
         Button:
-            text: "Go Back"
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
             on_release:
-                app.root.current = "seventh"
+                app.root.current = "sixth"
                 root.manager.transition.direction = "right"
 
 
 <EighthWindow>:
     name: "eighth"
 
-    GridLayout:
-        cols:1
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
 
         GridLayout:
             cols: 2
 
             Label:
-                text: "Thank you for completing those questions, now we'll show you some masks that for your needs! "
+                text: "Thank you for completing those questions. Click Finish! to view your results"
 
-    Button:
-        text: "Finish"
-        on_release:
-            app.root.current = "ninth"
-            root.manager.transition.direction = "left"
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25}
+            size_hint: 0.5, 0.2
+            text: "Finish!"
+            on_release:
+                app.root.current = "ninth"
+                root.manager.transition.direction = "up"
 
 
 <NinthWindow>:
     name: "ninth"
 
     Button:
+        background_color:0,1,1,0
+
         text: "Results"
+        pos_hint: {"x":.25, "y":.4}
+        size_hint: 0.5, 0.2
         on_release:
-            app.root.current = "main"
+            app.root.current = "ninth"
             root.manager.transition.direction = "right"
