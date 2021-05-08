@@ -154,7 +154,7 @@ WindowManager:
                 text: "What size mask would you like?"
 
         Button:
-            text: "Children's"
+            text: "Childrens"
             background_color: 1, 1, 1, 0.6
             pos_hint: {"x":.25, "y":.4}
             size_hint: 0.5, 0.2
@@ -387,6 +387,17 @@ WindowManager:
 
 
         Button:
+            text: "Grey"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "left"
+
+
+        Button:
             background_color:1,0,0,1
             pos_hint: {"x":.25, "y":.4}
             size_hint: 0.5, 0.2
@@ -522,6 +533,7 @@ WindowManager:
             pos_hint: {"x":.25}
             size_hint: 0.5, 0.2
             text: "Finish!"
+            on_press: root.clk(*args)
             on_release:
                 app.root.current = "ninth"
                 root.manager.transition.direction = "up"
@@ -529,13 +541,10 @@ WindowManager:
 
 <NinthWindow>:
     name: "ninth"
-
     Button:
         background_color:0,1,1,0
 
-        text: "Results"
+        text: 'Text'
         pos_hint: {"x":.25, "y":.4}
         size_hint: 0.5, 0.2
-        on_release:
-            app.root.current = "ninth"
-            root.manager.transition.direction = "right"
+        on_press: root.clk(*args)

@@ -1,0 +1,50 @@
+import pandas as pd
+
+data = pd.read_csv("MasksWithFeatures_4_20_2021_225.csv")
+
+for i, row  in data.iterrows():
+    data.at[i, 'size'] = data.at[i, 'size'].replace('suitable for most', 'universal')
+    data.at[i, 'size'] = data.at[i, 'size'].replace('one size fits most', 'universal')
+    data.at[i, 'size'] = data.at[i, 'size'].replace('boy', 'childrens')
+    data.at[i, 'size'] = data.at[i, 'size'].replace('girl', 'childrens')
+
+    data.at[i, 'gender'] = data.at[i, 'gender'].replace('boys', 'male')
+    data.at[i, 'gender'] = data.at[i, 'gender'].replace('womens', 'female')
+    data.at[i, 'gender'] = data.at[i, 'gender'].replace('mens', 'male')
+    data.at[i, 'gender'] = data.at[i, 'gender'].replace('girls', 'female')
+
+    data.at[i, 'color'] = str(data.at[i, 'color']).replace('plaid', 'pattern')
+    data.at[i, 'color'] = str(data.at[i, 'color']).replace('floral', 'pattern')
+    data.at[i, 'color'] = str(data.at[i, 'color']).replace('colorful', 'pattern')
+    data.at[i, 'color'] = str(data.at[i, 'color']).replace('gray', 'grey')
+    data.at[i, 'color'] = str(data.at[i, 'color']).replace('navy', 'blue')
+
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('3 layer', 'medium, low')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('3-ply', 'medium, low')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('3 ply', 'medium, low')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('kn95', 'high')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('3-layers', 'medium, low')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('filter pocket', 'high')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('2-ply', 'low')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('5-ply', 'high')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('4-ply', 'medium, high')
+    data.at[i, 'filterType'] = str(data.at[i, 'filterType']).replace('4 ply', 'medium, high')
+    data.at[i, 'material'] = str(data.at[i, 'material']).replace('mixed material', 'does not matter')
+
+print(data.keys())
+uniqSize = data['size'].unique()
+print(uniqSize, ', ')
+uniqColor = data['color'].unique()
+print(uniqColor, ', ')
+uniqMaterial = data['material'].unique()
+print(uniqMaterial, ', ')
+uniqFilter = data['filterType'].unique()
+print(uniqFilter, ', ')
+uniqGender = data['gender'].unique()
+print(uniqGender, ', ')
+uniqDispos = data['disposability'].unique()
+print(uniqDispos, ', ')
+uniqEarloop = data['earloop'].unique()
+print(uniqEarloop, ', ')
+
+csvOut = data.to_csv("Fixed_MasksWithFeatures_5_8_2021.csv")
