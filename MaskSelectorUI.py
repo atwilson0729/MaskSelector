@@ -23,7 +23,6 @@ darkMode = [True, False]
 Window.clearcolor = (.2, .2, .2, .2)
 
 
-
 Builder.load_string('''
 <SelectableLabel>:
     # Draw a background to indicate selection
