@@ -19,7 +19,7 @@ answerList = ['', '', '', '', '', '', '']
 weightingList = [1, 1, 1, 1, 1, 1, 1]
 count = 0
 topStr = ''
-darkMode = [True, False]
+darkMode = True
 Window.clearcolor = (.2, .2, .2, .2)
 
 
@@ -94,12 +94,13 @@ class TestApp(App):
 class StartMenu(Screen):
 
     def theme(self, button):
-        if darkMode[0]:
-            darkMode[0] = False
+        global darkMode
+        if darkMode:
+            darkMode = False
             Window.clearcolor = (.9, .9, .9, 1)
 
-        elif not darkMode[0]:
-            darkMode[0] = True
+        elif not darkMode:
+            darkMode = True
             Window.clearcolor = (.2, .2, .2, .2)
 
 
