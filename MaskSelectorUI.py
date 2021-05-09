@@ -231,7 +231,7 @@ class NinthWindow(Screen):
             if n >= 10:
                 break
         print(topStr)
-
+        print('Please give us your feedback at jcampb32@uncc.edu, above are the links for the masks')
 
 class WindowManager(ScreenManager):
     pass
