@@ -7,6 +7,13 @@ WindowManager:
     FifthWindow:
     SixthWindow:
     SeventhWindow:
+    SeventhWindowDisposability:
+    SeventhWindowMaterial:
+    SeventhWindowSize:
+    SeventhWindowGender:
+    SeventhWindowColor:
+    SeventhWindowFilterType:
+    SeventhWindowEarLoops:
     EighthWindow:
     NinthWindow:
 
@@ -21,7 +28,14 @@ WindowManager:
             #cols:2
 
             Label:
-                text: "Welcome to the Mask Quiz. Click Start to find your perfect mask! "
+                text: "Welcome to the Mask Quiz. Click Start to find your perfect mask! Using full screen works best! "
+                color: 0.2, 0.1, 1, 1
+        Button:
+            text: "Change theme"
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.theme(*args)
+
 
 
         Button:
@@ -50,6 +64,7 @@ WindowManager:
 
             Label:
                 text: "What kind of mask would you like? "
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Disposable"
@@ -87,6 +102,7 @@ WindowManager:
 
             Label:
                 text: "What material of mask do you prefer?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Cotton"
@@ -152,6 +168,7 @@ WindowManager:
 
             Label:
                 text: "What size mask would you like?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Childrens"
@@ -247,6 +264,7 @@ WindowManager:
 
             Label:
                 text: "Would you like a male female or unisex mask?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Male"
@@ -304,6 +322,7 @@ WindowManager:
 
             Label:
                 text: "Would color mask would you like?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Red"
@@ -423,6 +442,7 @@ WindowManager:
 
             Label:
                 text: "What level of filtration would you like?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Low"
@@ -480,9 +500,519 @@ WindowManager:
 
             Label:
                 text: "Do you want elastic or adjustable?"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             text: "Elastic"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowDisposability"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Adjustable"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowDisposability"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowDisposability>:
+    name: "SeventhWindowDisposability"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your disposability weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "seventh"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowMaterial>:
+    name: "SeventhWindowMaterial"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your material weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "SeventhWindowDisposability"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowSize>:
+    name: "SeventhWindowSize"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your size weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "SeventhWindowMaterial"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowGender>:
+    name: "SeventhWindowGender"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your gender weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "SeventhWindowSize"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowColor>:
+    name: "SeventhWindowColor"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your color weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowFilterType"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowFilterType"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowFilterType"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowFilterType"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhWindowFilterType"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "SeventhWindowGender"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowFilterType>:
+    name: "SeventhWindowFilterType"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your filter type weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhEarLoops"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhEarLoops"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhEarLoops"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhEarLoops"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "SeventhEarLoops"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_color:1,0,0,1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            text: "Back"
+            on_release:
+                app.root.current = "SeventhWindowColor"
+                root.manager.transition.direction = "right"
+
+<SeventhWindowEarLoops>:
+    name: "SeventhEarLoops"
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        padding: 50
+        spacing: 50
+
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "What is your Ear Loop weighting?"
+                color: 0.2, 0.1, 1, 1
+
+        Button:
+            text: "1"
             background_color: 0.4, 0.2, 1, 1
             pos_hint: {"x":.25, "y":.4}
             size_hint: 0.5, 0.2
@@ -492,7 +1022,37 @@ WindowManager:
                 root.manager.transition.direction = "left"
 
         Button:
-            text: "Adjustable"
+            text: "2"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "eighth"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "3"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "eighth"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "4"
+            background_color: 0.4, 0.2, 1, 1
+            pos_hint: {"x":.25, "y":.4}
+            size_hint: 0.5, 0.2
+            on_press: root.clk(*args)
+            on_release:
+                app.root.current = "eighth"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "5"
             background_color: 0.4, 0.2, 1, 1
             pos_hint: {"x":.25, "y":.4}
             size_hint: 0.5, 0.2
@@ -507,9 +1067,8 @@ WindowManager:
             size_hint: 0.5, 0.2
             text: "Back"
             on_release:
-                app.root.current = "sixth"
+                app.root.current = "SeventhWindowFilterType"
                 root.manager.transition.direction = "right"
-
 
 <EighthWindow>:
     name: "eighth"
@@ -527,6 +1086,7 @@ WindowManager:
 
             Label:
                 text: "Thank you for completing those questions. Click Finish! to view your results"
+                color: 0.2, 0.1, 1, 1
 
         Button:
             background_color:1,0,0,1
@@ -544,7 +1104,8 @@ WindowManager:
     Button:
         background_color:0,1,1,0
 
-        text: 'Text'
+        text: 'Left Click Here. Next Close the Kivy window to see your selection!'
+        color: 0.2, 0.1, 1, 1
         pos_hint: {"x":.25, "y":.4}
         size_hint: 0.5, 0.2
         on_press: root.clk(*args)
